@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Formulir Pendaftaran</title>
+    
+    <script>
+    function checkFileSize(input) {
+        var maxSize = 2 * 1024 * 1024; // 2 MB
+        if (input.files[0].size > maxSize) {
+            alert("Ukuran file lebih dari 2 MB.");
+            input.value = ""; // Reset nilai input
+        }
+    }
+</script>
+</head>
+<body>
+    <form action="cobaaa.html" method="post">
+
+    <div align="center">
+        <div class="border" align="center">
+    <h1>FORMULIR PENDAFTARAN</h1>
+    <h2>LOMBA VOLLY<br>
+    ANTAR RT RW</h2>
+<table>
+<tr>
+    <td>Nama Tim</td>
+    <td>:</td>
+    <td><input type="text" name="nama" placeholder="Masukkan nama tim" style="width: 385px;" pattern="[A-Za-z\s]+" required></td>
+</tr>
+
+<tr>
+    <td>Jumlah Anggota</td>
+    <td>:</td>
+    <td><input type="number" name="jum"placeholder="Masukkan jumlah anggota" style="width: 385px;"></td>
+</tr>
+
+<tr>
+    <td>Asal</td>
+    <td>:</td>
+    <td>RT<input type="number" name="RT" placeholder="">
+    RW<input type="number" name="RW" placeholder=""></td>
+</tr>
+
+<tr>
+    <td>Nama Ketua Tim</td>
+    <td>:</td>
+    <td><input type="text" name="nama"placeholder="Masukkan nama " style="width: 385px;"></td>
+</tr>
+
+<tr>
+    <td>No.HP Ketua Tim</td>
+    <td>:</td>
+    <td><input type="text" name="hp" placeholder="Masukkan no hp" style="width: 385px;"pattern="[0-9]+" maxlength="12" required></td>
+</tr>
+<tr>
+    <td>Foto KTP Ketua Tim</td>
+    <td>:</td>
+    <td><input type="file" name="foto" onchange="checkFileSize(this)"></td>
+</tr>
+<tr>
+    <td>Tanggal Pendaftaran</td>
+    <td>:</td>
+    <td><input type="date"></td>
+</tr>
+<tr>
+    <td>Tim</td>
+    <td>:</td>
+    <td><input type="radio" name="tim" value="putra">Putra
+    <input type="radio" name="tim" value="putri">Putri</td>
+</tr>
+
+</table>
+<tr>
+    <td> 
+<input type="submit" name="submit" value="DAFTAR">
+</tr>
+</div>
+</div>
+    </form>
+</body>
+</html>
